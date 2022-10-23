@@ -1,0 +1,59 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+ul {
+	list-style: none;
+}
+a:hover,button:hover,a:focus,button:focus{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:#1B1C21;
+}
+
+button {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+@font-face {
+	font-family:'ExtraBold';
+	src: url('../fonts/TTLakes-ExtraBold.ttf') format('truetype');
+    src: url('../fonts/TTLakes-ExtraBold.eot') format('eot');
+    src: url('../fonts/TTLakes-ExtraBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DemiBold';
+	src: url('../fonts/TTLakes-DemiBold.ttf') format('truetype');
+    src: url('../fonts/TTLakes-DemiBold.eot') format('eot');
+    src: url('../fonts/TTLakes-DemiBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:'Regular';
+	src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    src: url('../fonts/TTLakes-Regular.eot') format('eot');
+    src: url('../fonts/TTLakes-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

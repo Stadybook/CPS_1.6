@@ -1,0 +1,120 @@
+@import "del.scss";
+$font-family_1: 'ExtraBold';
+$font-family_2: 'Regular';
+$color_1: #B5B6BC;
+$color_2:#EAEAEA;
+$color_3: #FFFFFF;
+$color_4: #41F6D7;
+$background-color_1: #FFFFFF;
+$background-color_4: #41F6D7;
+
+.sidebar__title{
+    position: relative;
+    font-family: $font-family_1;
+    font-size: 24px;
+	&::before {
+		position: absolute;
+		left: -15px;
+        top:0;
+		content: "";
+		height: 40px;
+		width: 3px;
+		background-color: $background-color_4;
+		border: 1px solid $color_4;
+		border-radius: 3px;
+	}  
+}
+.sidebar-feedback,.sidebar-connection{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: $background-color_1;
+    justify-content: flex-start;
+    margin-left: auto;
+}
+.form__body{
+    display: flex;
+    flex-direction: column;
+    gap:22px;
+}
+.form__input{
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    padding: 12px 16px;
+}
+textarea.form__input{
+    resize: none;
+   height: 118px;
+}
+.sidebar-message,.sidebar-call{
+    transition: 200ms;
+    transform: translateX(100%);
+    position: fixed;
+    right: 0px;
+    top:0;
+    z-index: 10;
+}
+.sidebar-message--show,.sidebar-call--show{
+    transition: 200ms;
+    transform: translateX(0%);	
+}
+.form__order .order__text::after{
+    right: -20px;
+}
+
+@media (max-width: 767px){
+    .sidebar-feedback,.sidebar-connection{
+        padding: 19px 16px 32px 16px;
+        width: 320px; 
+    }
+    .sidebar__title{
+        top:80px;
+        left:-58px;
+    }
+    .form{
+        margin-top:76px;
+    }
+    .form__input{
+        width: 288px;
+    }
+    .form__order{
+        margin-left:80px;
+     }
+     .form__body{
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+    }
+}
+@media (min-width: 768px){
+    .sidebar-feedback,.sidebar-connection{
+        padding: 19px 24px 32px 16px;
+        margin-left: auto;
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), -16px 0px 52px rgba(14, 24, 80, 0.2);
+        width: 440px;
+    }
+	.sidebar-message,.sidebar-call{
+		background-color: rgba(255,255,255 ,0.96);
+		width: 100%;
+	}
+    .form__input{
+        width: 400px;
+    }
+    .form__order{
+       margin-left:140px;
+    }
+    .form_warning{
+        font-size: 14px;
+        padding-right:32px;
+    }
+    .sidebar__list{
+        position: relative;
+    }
+    .sidebar-message .sidebar__item:first-child,
+    .sidebar-call .sidebar__item:first-child{
+        position: absolute;
+        left:-65px;
+    }  
+}
+
