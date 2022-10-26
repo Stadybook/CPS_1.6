@@ -1,0 +1,64 @@
+@media (min-width: 320px) and (max-width: 450px) {
+    .section__text {
+		max-height: 88px;
+		overflow: hidden;
+		width: 288px;
+		transition: max-height 500ms;
+	}
+
+}
+@media (min-width: 451px) and (max-width: 767px) {
+    .section__text {
+		max-height: 88px;
+		width: 288px;
+		overflow: hidden;
+		transition: max-height 500ms;
+	}
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+    .section__text {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		max-height: 160px;
+		width: 312px;
+		overflow: hidden;
+		transition: max-height 500ms;
+	}
+	.swiper__list {
+		display: grid;
+		grid-template-columns: repeat(3, 232px);
+		gap: 24px;
+		max-height: 190px;
+		overflow: hidden;
+		transition: max-height 200ms;	
+	}
+}
+@media (min-width: 1440px) {
+    .section__text {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		height: 160px;
+		overflow: hidden;
+		width: 490px;
+		transition: max-height 500ms;
+	}
+	.swiper__list {
+		display: grid;
+		grid-template-columns: repeat(4,240px);
+		gap: 32px;
+		max-height: 190px;
+		overflow: hidden;
+		transition: max-height 200ms;
+	}
+	
+}
+.section__text--show{
+	max-height: 1000px;
+	transition: max-height 1s;
+}
+.swiper__list--show {
+	max-height: 1000px;
+	transition: max-height 300ms;
+}

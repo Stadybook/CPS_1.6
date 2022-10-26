@@ -1,0 +1,120 @@
+$background-color_1: #F8F8F8;
+$background-color_2: #FFFFFF;
+$color_2:#EAEAEA;
+$color_3: #FFFFFF;
+$color_4: #41F6D7;
+$color_5:#D9FFF5;
+.header {
+	background-color: $background-color_2;
+	border-bottom: 1px solid $color_5;
+	padding: 19px 16px 19px 16px;
+}
+.header__nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header__list {
+	&:nth-child(2n) {
+		margin-left: 250px;
+	}
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.logo {
+	display: block;
+	max-width: 97px;
+	max-height: 51px;
+}
+@media (min-width: 320px) and (max-width: 450px) {
+	.header__list {
+		&:nth-child(2n) {
+			display: none;
+		}
+		&:first-child {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 10px;
+				left: 170px;
+				height: 32px;
+				width: 2px;
+				border: 0.5px solid $color_2;
+				border-radius: 1px;
+			}
+		}
+	}
+}
+@media (min-width: 451px) and (max-width: 767px) {
+    .header__list {
+		&:nth-child(2n) {
+			display: none;
+		}
+		&:first-child {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 10px;
+				left: 170px;
+				height: 32px;
+				width: 2px;
+				border: 0.5px solid $color_2;
+				border-radius: 1px;
+			}
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+    .header__list {
+		&:first-child {
+			position: relative;
+			gap: 43px;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 10px;
+				left: 60px;
+				height: 32px;
+				width: 2px;
+				border: 0.5px solid $color_2;
+				border-radius: 1px;
+			}
+		}
+		position: relative;
+		&:nth-child(2n) {
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 165px;
+				height: 32px;
+				width: 2px;
+				border: 0.5px solid $color_2;
+				border-radius: 1px;
+			}
+		}
+	}
+}
+@media (min-width: 1440px) {
+    .header__list {
+		&:not(:last-child) {
+			display: none;
+		}
+	} 
+    .header {
+		background-color: $background-color_1;
+		border: none;
+		padding: 0;
+	}
+	.header__nav {
+		justify-content: flex-end;
+        padding-bottom: 17px;
+	}
+	.header__item {
+		display: flex;
+		align-items: center;
+	}
+}

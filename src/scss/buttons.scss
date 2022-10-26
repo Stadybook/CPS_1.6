@@ -1,0 +1,133 @@
+$font-family_3: 'DemiBold';
+$color_2:#EAEAEA;
+$color_3: #FFFFFF;
+$color_5: #FF3E79;
+$background-color_2: #FF3E79;
+
+.icon {
+	background-color: $background-color_2;
+	width: 40px;
+	height: 38px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:focus {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+}
+.icon-btn {
+	display: flex;
+	align-items: center;
+    &:focus {
+		opacity: 0.8;
+	}
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.more-btn {
+	font-family: $font-family_3;
+    font-size: 16px;
+	position: relative;
+	&::before {
+		content: url(../img/strela.svg);
+		position: absolute;
+		top: -3px;
+        left: 0;
+	}
+}
+.more-btn--clicked {
+	&::before {
+		transform: rotate(180deg) translateY(4px);
+	}
+}
+.section__btn {
+	margin-top: 24px;
+}
+.order__btn{
+    padding-left: 12px;
+    width: 107px;
+    height: 32px;
+    border-radius: 16px;
+    background-color:$color_5;
+    color: $color_3;
+    text-align: left;
+}
+
+.order__btn:hover,.order__btn:focus{
+    box-shadow: inset 0px 0px 5px 0.5px $color_2;
+}
+
+.order__text{
+    font-size: 12px;
+    letter-spacing: -0.15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+}
+.order__text::after{
+    content: '';
+    position: absolute;
+    border-top: 2px solid $color_3;
+    border-right: 2px solid$color_3;
+    height: 8px;
+    width: 8px;
+    transform: rotate(45deg);
+    top:3px;
+    right: -30px;
+}
+@media (min-width: 320px) and (max-width: 450px) {
+    .section__btn {
+		display: none;
+	}
+    .icon_text {
+        display: none;
+    }
+    .section__more {
+        margin: 16px 0 ;
+        padding-left:30px ;
+    }
+}
+@media (min-width: 451px) and (max-width: 767px) {
+    .section__more {
+		margin: 16px 0 ;
+		padding-left:30px ;
+	}
+    .icon_text {
+		display: none;
+	}
+    .section__btn {
+		display: none;
+	}
+}
+@media (min-width: 768px) and (max-width: 1439px){
+    .section__more {
+		padding-left: 30px;
+	}
+    .section__btn {
+		padding-left: 33px;
+	}
+    .icon_text {
+		display: none;
+	}
+}
+@media (min-width: 768px){
+    .section__more {
+		padding-left: 30px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.icon_text {
+		padding: 0 8px 0 32px;
+	}
+    .section__btn {
+		padding-left: 39px;
+	}
+}

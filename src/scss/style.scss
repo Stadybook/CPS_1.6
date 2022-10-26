@@ -1,0 +1,49 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+ul {
+	list-style: none;
+}
+a:hover,button:hover,a:focus,button:focus{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:#1B1C21;
+}
+
+button {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+@import 'buttons.scss';
+@import 'header.scss';
+@import 'sections.scss';
+@import 'heigh_sections.scss';
+@import 'swipers.scss';
+@import 'main_navigation.scss';
+@import 'general.scss';
+@import 'sidebar-left.scss';
+@import 'sidebar-right.scss';
+@import 'tabl_servise.scss';
+@import 'footer.scss';
+@import 'sidebars.scss';
+@import 'font.scss';
+@import 'text.scss';
+@import 'psevdo_el.scss';
+
+

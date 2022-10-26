@@ -1,0 +1,75 @@
+$background-color_4: #41F6D7;
+$color_4: #41F6D7;
+.title {	
+	&::before {
+		position: absolute;
+		left: -18px;
+		content: "";
+		height: 40px;
+		width: 3px;
+		background-color: $background-color_4;
+		border: 1px solid $color_4;
+		border-radius: 3px;
+	}
+}
+.section__offer:hover::after,
+.section__offer:focus::after{
+    content: '';
+    position: absolute;
+    border-top: 2px solid $color_5;
+    border-right: 2px solid $color_5;
+    height: 6px;
+    width: 6px;
+    transform: rotate(45deg);
+    top:7px;
+    left: 310px;  
+}
+.choice__item:hover,.choice__item:focus{
+	&::before {
+		position: absolute;
+		content: "";
+		left: -17px;
+		top: -5px;
+		height: 32px;
+		width: 3px;
+		background-color: $background-color_3;
+		border: 1px solid $color_3;
+		border-radius: 2px;
+	}
+}
+
+@media (min-width: 320px)  and  (max-width: 767px) {
+    .section__offer:hover::after,
+    .section__offer:focus::after{
+        top:25px;
+        left: 110px; 
+    }
+	.sidebar__title::before{
+        left: -25px;
+    }
+}
+@media (min-width: 335px) and (max-width: 767px) {
+	.section__offer:hover::after,
+    .section__offer:focus::after{
+        top:7px;
+        left: 310px; 
+    }
+	.sidebar__title::before{
+        left: -25px;
+    }
+}
+@media (min-width: 320px)  and  (max-width: 1439px) {
+    .main__title:before{
+        left: 0px;
+    }
+}
+@media (min-width: 1440px) {
+    .main__title {
+		position: absolute;
+		left: 32px;
+		top: 42px;
+		&::before {
+			left: -30px;
+		}
+	}
+}

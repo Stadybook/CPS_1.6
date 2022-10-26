@@ -1,0 +1,35 @@
+$font-family_1: 'Regular';
+$font-family_2: 'ExtraBold';
+$font-family_3: 'DemiBold';
+$color_5: #FF3E79;
+
+body{
+    font-family: $font-family_1;
+    line-height: 18px;
+	letter-spacing: 0.2px;
+    font-size: 14px;
+}
+.text--btn{
+	font-family: $font-family_3;
+    font-size: 16px;
+}
+h1 {
+	font-family: $font-family_2;
+	font-size: 28px;
+	line-height: 40px;
+	letter-spacing: -0.6px;
+}
+h2 {
+	font-family: $font-family_1;
+	font-size: 16px;
+	letter-spacing: -0.2px;
+	text-transform: uppercase;
+	color: $color_1;
+}
+h3{
+    font-family: $font-family_2;
+    font-size: 24px;
+}
+.color{
+    color: $color_5;
+}

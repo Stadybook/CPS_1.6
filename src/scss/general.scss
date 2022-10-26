@@ -1,0 +1,60 @@
+$font-family_3: 'DemiBold';
+$background-color_1: #F8F8F8;
+
+
+body{
+	background-color: $background-color_1;
+}
+.main{
+	min-height: 80vh;
+}
+.container{
+	position: relative;
+	top:0;
+	left:0;
+}
+.container-opasity{
+	filter: opacity(0.04);
+	width: 100%;
+	position: fixed;
+
+}
+@media (min-width: 320px) and (max-width: 450px) {
+	.main {
+		max-width: 400px;
+		overflow-y: scroll;
+	}
+	.main__title{
+		padding:24px 16px 0 16px;
+	}
+}
+@media (min-width: 451px) and (max-width: 767px) {
+	.container{
+		max-width: 451px;
+		margin: 0 auto;
+	}
+	.main {
+		overflow-y: scroll;
+	}
+	.main__title{
+		padding-left: 16px;
+	}
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+	.container{
+		max-width: 786px;
+		margin: 0 auto;
+	}
+	.main {
+		padding-left: 24px;
+		padding-top: 24px;
+		overflow: hidden;
+	}
+}
+@media (min-width: 1440px) {
+	.container {
+		max-width: 1120px;
+		padding: 42px 29px 0 34px;
+
+	}
+}
