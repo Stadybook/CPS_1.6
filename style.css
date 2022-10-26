@@ -521,7 +521,7 @@ html {
 
 @media (min-width: 1440px) {
   .main__service {
-    margin: 19 -9px 0 20;
+    margin: 19px -9px 0 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -720,7 +720,9 @@ textarea.form__input {
     border-radius: 6px;
     display: grid;
     grid-template-columns: 100px 120px;
-    grid-template-areas: "kind kind" "price price" "time orde";
+    grid-template-areas: "kind kind"
+ "price price"
+ "time orde";
     gap: 16px;
     width: 250px;
     height: 200px;
