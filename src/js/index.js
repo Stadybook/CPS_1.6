@@ -55,26 +55,34 @@ document.addEventListener('click', function(evt){
     if(evt.target.closest('.icon-message')){
         container.classList.add('container-opasity');   
         sidebar_message.classList.add('sidebar--show'); 
-        sidebar_burger.classList.remove('sidebar--show');   
+        sidebar_burger.classList.remove('sidebar--show'); 
+        if (window.screen.width >= 1443){
+        sidebar_burger.classList.add('burger--none');   
+        }
         }
     if(evt.target.closest('.icon-call')){
         container.classList.add('container-opasity');   
         sidebar_call.classList.add('sidebar--show');  
         sidebar_burger.classList.remove('sidebar--show');  
+        if (window.screen.width >= 1443){
+            sidebar_burger.classList.add('burger--none');   
+            }
     }
     if(evt.target.closest('.icon-close')){
         sidebars.forEach((sidebar)=>{
             sidebar.classList.remove('sidebar--show')
         }) 
-        container.classList.remove('container-opasity');         
+        container.classList.remove('container-opasity'); 
+        sidebar_burger.classList.remove('burger--none');        
     }  
-})
-container.addEventListener('click', function(evt){
-    if(container.classList.contains('container-opasity')){
+    if(container.classList.contains('container-opasity') && (!evt.target.closest('.sidebar')) && (!evt.target.closest('.icon'))){
         container.classList.remove('container-opasity');
         sidebars.forEach((sidebar)=>{
             sidebar.classList.remove('sidebar--show')
         }) 
+        if (window.screen.width >= 1443){
+        sidebar_burger.classList.remove('burger--none');
+        }
     }  
 })
 
