@@ -56,7 +56,7 @@ document.addEventListener('click', function(evt){
         container.classList.add('container-opasity');   
         sidebar_message.classList.add('sidebar--show'); 
         sidebar_burger.classList.remove('sidebar--show'); 
-        if (window.screen.width >= 1443){
+        if (window.screen.width >= 1440){
         sidebar_burger.classList.add('burger--none');   
         }
         }
@@ -64,7 +64,7 @@ document.addEventListener('click', function(evt){
         container.classList.add('container-opasity');   
         sidebar_call.classList.add('sidebar--show');  
         sidebar_burger.classList.remove('sidebar--show');  
-        if (window.screen.width >= 1443){
+        if (window.screen.width >= 1440){
             sidebar_burger.classList.add('burger--none');   
             }
     }
@@ -80,7 +80,7 @@ document.addEventListener('click', function(evt){
         sidebars.forEach((sidebar)=>{
             sidebar.classList.remove('sidebar--show')
         }) 
-        if (window.screen.width >= 1443){
+        if (window.screen.width >= 1440){
         sidebar_burger.classList.remove('burger--none');
         }
     }  
